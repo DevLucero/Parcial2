@@ -1,0 +1,61 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>Calculator</ion-title>
+    <ion-buttons slot="end">
+      <ion-button routerLink="../calculator">Calculator</ion-button>
+      <ion-button routerLink="../recetas">Recetas</ion-button>
+      <ion-button routerLink="../converter">Converter</ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <div class="calculadora">
+    <div class="espacio">
+        <textarea class="input">{{operaciones}}</textarea>
+        <textarea class="result" disabled>{{mostrar}}</textarea>
+    </div> 
+    <div class="contenedor1">
+      <div class="teclas">
+        <div class="uno-dos-tres">
+          <ion-button (click)="add(1)">1</ion-button>
+          <ion-button (click)="add(2)">2</ion-button>
+          <ion-button (click)="add(3)">3</ion-button>
+        </div>
+        <div class="cuatro-cinco-seis">
+          <ion-button (click)="add(4)">4</ion-button>
+          <ion-button (click)="add(5)">5</ion-button>
+          <ion-button (click)="add(6)">6</ion-button>
+        </div>
+        <div class="siete-ocho-nueve">
+          <ion-button (click)="add(7)">7</ion-button>
+          <ion-button (click)="add(8)">8</ion-button>
+          <ion-button (click)="add(9)">9</ion-button>
+        </div>
+        <div class="zero-punto">
+          <ion-button (click)="add(0)">0</ion-button>
+          <ion-button (click)="addOperadores('.')">.</ion-button>
+          <ion-button (click)="borrar()">C</ion-button>
+        </div>
+      </div>
+      <div class="operadores">
+       <div class="suma-menos">
+          <ion-button (click)="addOperadores('+')">+</ion-button>
+          <ion-button (click)="addOperadores('-')">-</ion-button>
+       </div>
+       <div class="multi-div">
+        <ion-button (click)="addOperadores('/')">/</ion-button>
+        <ion-button (click)="addOperadores('*')">*</ion-button>
+       </div>
+       <div class="clear">
+        <ion-button class="clr" (click)="borrarUno()"><ion-icon name="chevron-back-circle-outline"></ion-icon></ion-button>
+       </div>
+       <div class="enter">
+        <ion-button (click)="calcular()">Enter</ion-button>
+      </div>
+       
+      </div>
+     
+    </div>
+  </div>
+</ion-content>

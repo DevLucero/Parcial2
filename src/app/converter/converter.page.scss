@@ -1,0 +1,60 @@
+.contenedor{
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-50%);
+    display: flex;
+}
+
+.selecter{
+    width: 250px;
+    border-radius: 10px;
+    background: white;
+    margin-bottom: 25px;
+    text-align: center;
+    color: blueviolet;
+}
+textarea{
+    width: 250px;
+    border-radius: 10px;
+    resize: none;
+    text-indent: 5px;
+    text-align: center;
+}
+.change{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    color: red;
+}
+.changeo{
+    position: absolute;
+    top: 120%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+}
+.chang{
+    width: 100px;
+}
+.moneda{
+    height: 30px;
+    font-size: 15px;
+}
+.mostrador2{
+    text-align: end;
+}
+.selecter2{
+    width: 250px;
+    border-radius: 10px;
+    background: white;
+    margin-bottom: 25px;
+    color: blueviolet;
+    margin-left: 19%;
+}
+.selecter::placeholder{
+    color: black;
+}
+.selecter2::placeholder{
+    color: black;
+}

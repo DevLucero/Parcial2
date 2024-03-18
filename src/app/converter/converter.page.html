@@ -1,0 +1,37 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>Converter</ion-title>
+    <ion-buttons slot="end">
+    <ion-button routerLink="../calculator">Calculator</ion-button>
+    <ion-button routerLink="../recetas">Recetas</ion-button>
+    <ion-button routerLink="../converter">Converter</ion-button>
+  </ion-buttons>
+  </ion-toolbar>
+  
+</ion-header>
+
+<div class="contenedor">
+  <div class="mostrador1">
+    <ion-select class="selecter" [(ngModel)]="selectValue1" (ionChange)="onSelectionChange($event)" placeholder="{{pais1}}">
+      <ion-select-option value="mxm">{{pesoMXM}}</ion-select-option>
+      <ion-select-option value="usd">{{dolarUSD}}</ion-select-option>
+      <ion-select-option value="sol">{{solPEN}}</ion-select-option>
+    </ion-select>
+    <textarea [(ngModel)]="var1" >{{var1}}</textarea>
+    <textarea class="moneda">{{moneda}}</textarea>
+  </div>
+  <div class="chang">
+    <ion-button class="change" color="danger" (click)="change()"><ion-icon name="swap-horizontal-outline"></ion-icon></ion-button>
+    <ion-button class="changeo" (click)="calc()">Calc</ion-button>  
+  </div>
+  <div class="mostrador2">
+    <ion-select class="selecter2" [(ngModel)]="selectValue2" placeholder="{{pais2}}" (ionChange)="onSelectionChange2($event)" slot="end">
+      <ion-select-option value="mxm">{{pesoMXM2}}</ion-select-option>
+      <ion-select-option value="usd">{{dolarUSD2}}</ion-select-option>
+      <ion-select-option value="sol">{{solPEN2}}</ion-select-option>
+    </ion-select>
+    <textarea [(ngModel)]="var2">{{var2}}</textarea>
+    <textarea class="moneda">{{moneda2}}</textarea>
+  </div>
+</div>
+

@@ -1,0 +1,22 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>Recetas</ion-title>
+    <ion-buttons slot="end">
+      <ion-button routerLink="../calculator">Calculator</ion-button>
+      <ion-button routerLink="../recetas">Recetas</ion-button>
+      <ion-button routerLink="../converter">Converter</ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-card *ngFor="let recipe of recipes">
+    <ion-card-header>
+      <ion-card-title>{{ recipe.title }}</ion-card-title>
+    </ion-card-header>
+    <ion-card-content>
+      <p>{{ recipe.description }}</p>
+      <p>{{ recipe.ingredientes }}</p>
+    </ion-card-content>
+  </ion-card>
+</ion-content>

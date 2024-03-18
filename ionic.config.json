@@ -1,0 +1,7 @@
+{
+  "name": "2doParcialProject",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}
